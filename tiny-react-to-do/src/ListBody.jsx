@@ -9,8 +9,9 @@ function ListBody({ listItemInput, setListItemInput }) {
           ? listItemInput.map((item) => {
               return (
                 <ListItem
-                  listItemInput={item}
-                  key={Number(Math.random() * Math.random())}
+                  setListItemInput={setListItemInput}
+                  item={item}
+                  key={item.key}
                 />
               );
             })

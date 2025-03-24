@@ -7,7 +7,12 @@ function NewListItem({ setListItemInput }) {
       alert("Please add a task before submitting");
     } else {
       setListItemInput((currListItems) => {
-        return [newItem, ...currListItems];
+        const newLI = {
+          text: newItem,
+          key: Math.random() * Math.random(),
+        };
+
+        return [newLI, ...currListItems];
       });
       setNewItem("");
     }
